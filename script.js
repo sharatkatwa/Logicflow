@@ -20,7 +20,7 @@ gsap.to('#bg-img', {
     scroller: 'body',
     start: 'top 5%',
     end: 'top -30%',
-    markers: true,
+    // markers: true,
     scrub: 2,
   },
 })
