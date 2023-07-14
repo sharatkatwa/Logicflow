@@ -3,57 +3,64 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Khula', sans-serif;
-  color: #092628;
+  /* color: #092628; */
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
-  /* overflow: hidden; */
+  /* overflow-x: hidden; */
+}
+#main {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 #navbar {
   height: 140px;
   width: 100%;
-  /* background-color:  ; */
+  padding: 0 100px;
   background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 50%;
+  justify-content: space-between;
+  /* gap: 50%; */
   position: fixed;
   z-index: 999;
-  /* overflow: hidden; */
 }
 #navbar #nav-menu {
-  width: 20%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 #nav-menu h4 {
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
+  margin-left: 50px;
   font-size: 1.05rem;
 }
 #navbar img {
-  /* height: 100px; */
   width: 200px;
 }
 
 #page1 {
-  height: 105vh;
+  height: 110%;
   width: 100%;
-  /* background-color: red; */
   position: relative;
 }
-#page1 #bg-img {
-  height: 85vh;
+#bg-div {
   width: 100%;
+  height: 80%;
+  overflow: hidden;
   z-index: -1;
+}
+#bg-div #bg-img {
+  /* object-fit: cover; */
+  /* object-position: center; */
+  width: 100%;
+  height: 100%;
 }
 #page1 #main-img {
   position: absolute;
