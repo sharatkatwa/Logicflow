@@ -24,3 +24,16 @@ gsap.to('#bg-img', {
     scrub: 2,
   },
 })
+
+gsap.from('.topic-cards img', {
+  bottom: '-10rem',
+  // duration: 0.5,
+  scrollTrigger: {
+    trigger: '#page2',
+    scroller: 'body',
+    start: 'top 80%',
+    end: 'top 0%',
+    // markers: true,
+    scrub: 3,
+  },
+})

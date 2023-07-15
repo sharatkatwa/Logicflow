@@ -46,7 +46,7 @@ body {
 }
 
 #page1 {
-  height: 110%;
+  height: 100%;
   width: 100%;
   position: relative;
 }
@@ -57,8 +57,6 @@ body {
   z-index: -1;
 }
 #bg-div #bg-img {
-  /* object-fit: cover; */
-  /* object-position: center; */
   width: 100%;
   height: 100%;
 }
@@ -74,7 +72,6 @@ body {
 }
 
 #page1 #page1-text {
-  /* background-color: #fff; */
   position: absolute;
   width: 50%;
   top: 17%;
@@ -85,7 +82,7 @@ body {
   color: #fff;
   width: 70%;
   font-size: 5rem;
-  line-height: 80px;
+  line-height: 5rem;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 800;
   margin-bottom: 40px;
@@ -94,20 +91,19 @@ body {
   color: #fff;
   width: 60%;
   font-size: 1.15rem;
-  line-height: 25px;
+  line-height: 1.8rem;
   font-weight: 400;
   margin-bottom: 40px;
 }
 #page1 #page1-text button {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 600;
-
   font-size: 1.4rem;
   color: #092628;
   background-color: #ff5d53;
   border: none;
   border-radius: 30px;
-  padding: 15px 40px;
+  padding: 1rem 2rem;
   transition: all ease 0.5s;
 }
 #page1 #page1-text button:hover {
@@ -117,6 +113,89 @@ body {
 }
 
 #page2 {
+  padding: 0 100px;
+  margin-top: 15%;
   width: 100%;
   height: 100vh;
+  position: relative;
+}
+#page2 h3 {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3rem;
+  width: 25%;
+  line-height: 3rem;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+.grid-col-span {
+  grid-column: span 2;
+}
+.grid-row-span {
+  grid-row: span 2;
+}
+#page2 #topics {
+  height: 70%;
+  margin: 4rem 10rem;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: 2rem;
+  row-gap: 4rem;
+}
+.topic-cards:nth-child(1) {
+  grid-column: span 3;
+}
+.topic-cards:nth-child(2) {
+  grid-column: span 2;
+}
+
+.topic-cards:nth-child(3) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+.topic-cards:nth-child(4) {
+  grid-column: span 2;
+}
+.topic-cards:nth-child(5) {
+  grid-column: span 3;
+}
+.topic-cards {
+  border-radius: 0.6rem;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* border: 1px solid gray; */
+  background-color: #092628;
+  color: #fff;
+  padding: 2rem;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+}
+.topic-cards h4 {
+  font-size: 2rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+.topic-cards p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+.topic-cards a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: solid 1px #fff;
+}
+.topic-cards img {
+  position: absolute;
+  width: 20rem;
+  bottom: -5rem;
+  right: -7rem;
+  z-index: 1;
+  opacity: 0.6;
+}
+#topic3 img {
+  width: 40rem;
+  bottom: 0;
+  left: auto;
 }
