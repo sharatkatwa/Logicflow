@@ -114,7 +114,7 @@ body {
 
 #page2 {
   padding: 0 100px;
-  margin-top: 15%;
+
   width: 100%;
   height: 100vh;
   position: relative;
@@ -198,4 +198,24 @@ body {
   width: 40rem;
   bottom: 0;
   left: auto;
+}
+
+#page3 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: red;
+  padding: 0 100px;
+}
+#page3 h3 {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3rem;
+  width: 25%;
+  line-height: 3rem;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+.swiper {
+  width: 600px;
+  height: 300px;
 }

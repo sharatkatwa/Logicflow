@@ -32,8 +32,30 @@ gsap.from('.topic-cards img', {
     trigger: '#page2',
     scroller: 'body',
     start: 'top 80%',
-    end: 'top 0%',
+    end: 'top -100%',
     // markers: true,
-    scrub: 3,
+    scrub: 2,
+  },
+})
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
   },
 })
