@@ -1,3 +1,11 @@
+// gsap.from('#page1-text h2, #page1-text p, #page1-text button', {
+//   scale: 1.5,
+//   y: 200,
+//   opacity: 0,
+//   duration: 3,
+//   // stagger: 1,
+// })
+
 gsap.to('#navbar', {
   backgroundColor: '#092628',
   duration: 0.5,
@@ -38,24 +46,24 @@ gsap.from('.topic-cards img', {
   },
 })
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
+var swiper = new Swiper('.mySwiper', {
+  effect: 'cards',
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
+})
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
+gsap.to('#side-img', {
+  y: -300,
+  duration: 0.5,
+  scrollTrigger: {
+    trigger: '#page3',
+    scroller: 'body',
+    start: 'top 60%',
+    end: 'top -100%',
+    // markers: true,
+    scrub: 3,
   },
 })
