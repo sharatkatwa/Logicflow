@@ -337,7 +337,7 @@ body {
     height: 35vh;
   }
   #page1 #page1-text {
-    top: 45vh;
+    top: 43vh;
     width: 100%;
     left: 10vw;
   }
@@ -347,11 +347,12 @@ body {
     line-height: 10vw;
   }
   #page1 #page1-text p {
-    width: 70%;
-    font-size: 3vw;
-    line-height: 4vw;
-    margin-top: 4vw;
-    margin-bottom: 6vw;
+    width: 80%;
+    font-weight: 500;
+    font-size: 4vw;
+    line-height: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 7vw;
   }
   #page1 #page1-text button {
     font-size: 4vw;
