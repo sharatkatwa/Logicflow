@@ -21,43 +21,52 @@ body {
 }
 #main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
+  /* background-color: blue; */
 }
 
 #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 140px;
   width: 100%;
-  padding: 0 100px;
+  padding: 0 5vw;
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   /* gap: 50%; */
   position: fixed;
   z-index: 999;
 }
+#navbar i {
+  color: #fff;
+  font-size: 4vw;
+  font-weight: 900;
+  display: none;
+}
 #navbar #nav-menu {
   display: flex;
+  gap: 3vw;
+  align-items: center;
+  /* align-items: right; */
 }
 #nav-menu h4 {
   font-weight: 500;
   color: #fff;
-  margin-left: 50px;
-  font-size: 1.05rem;
+  font-size: 0.9vw;
 }
 #navbar img {
-  width: 200px;
+  width: 12vw;
 }
 
 #page1 {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: relative;
 }
 #bg-div {
   width: 100%;
-  height: 80%;
+  height: 85%;
   overflow: hidden;
   z-index: -1;
 }
@@ -67,59 +76,58 @@ body {
 }
 #page1 #main-img {
   position: absolute;
-  height: 800px;
-  width: 800px;
+  height: 700px;
+  width: 600px;
   object-fit: cover;
   display: flex;
   right: 0;
-  top: 15%;
-  border-radius: 20px 0px 0px 20px;
+  top: 140px;
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 
 #page1 #page1-text {
   position: absolute;
   width: 50%;
-  top: 17%;
-  left: 20%;
+  top: 150px;
+  left: 20vw;
 }
 
 #page1 #page1-text h2 {
   color: #fff;
-  width: 70%;
-  font-size: 5rem;
-  line-height: 5rem;
+  width: 80%;
+  font-size: 4vw;
+  line-height: 4.5vw;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 800;
-  margin-bottom: 40px;
+  margin-bottom: 1vw;
 }
 #page1 #page1-text p {
   color: #fff;
   width: 60%;
-  font-size: 1.15rem;
-  line-height: 1.8rem;
+  font-size: 0.9vw;
+  line-height: 1.2vw;
   font-weight: 400;
   margin-bottom: 40px;
+  opacity: 0.9;
 }
 #page1 #page1-text button {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 600;
-  font-size: 1.4rem;
-  color: #092628;
+  font-size: 1vw;
   background-color: #ff5d53;
+  color: #fff;
   border: none;
   border-radius: 30px;
-  padding: 1rem 2rem;
-  transition: all ease 0.5s;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  transition: all ease 0.4s;
 }
 #page1 #page1-text button:hover {
   scale: 0.97;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #092628;
 }
 
 #page2 {
-  padding: 0 7vw;
-
+  padding: 0 5vw;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -140,12 +148,12 @@ body {
   grid-row: span 2;
 }
 #page2 #topics {
-  height: 70%;
-  margin: 4rem 10rem;
+  height: 80%;
+  margin: 4rem 5rem;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  column-gap: 2rem;
-  row-gap: 4rem;
+  column-gap: 2vw;
+  row-gap: 4vw;
 }
 .topic-cards:nth-child(1) {
   grid-column: span 3;
@@ -166,9 +174,6 @@ body {
 }
 .topic-cards {
   border-radius: 0.6rem;
-  /* width: 100%; */
-  /* height: 100%; */
-  /* border: 1px solid gray; */
   background-color: #092628;
   color: #fff;
   padding: 2rem;
@@ -194,55 +199,48 @@ body {
 }
 .topic-cards img {
   position: absolute;
-  width: 20rem;
+  width: 20vw;
   bottom: -5rem;
   right: -7rem;
   z-index: 1;
   opacity: 0.6;
 }
 #topic3 img {
-  width: 40rem;
+  width: 40vw;
   bottom: 0;
   left: auto;
 }
 
 #page3 {
-  height: 100%;
-  width: 100%;
   position: relative;
+  height: 100vh;
+  width: 100%;
   /* background-color: red; */
   overflow: hidden;
-  padding: 0 7vw;
+  padding: 0 5vw;
 }
 #page3 h3 {
   font-family: 'Fira Sans', sans-serif;
   font-size: 3rem;
   color: #092628;
   width: 25%;
-  /* line-height: 3rem; */
   font-weight: 800;
-  margin: 2rem 0;
+  margin: 4vw 0;
 }
 #page3-content {
-  /* position: relative; */
   width: 100%;
   height: 100%;
   display: flex;
-  /* align-items: center; */
   justify-content: space-around;
-  margin-top: 5rem;
+  /* margin-top: 4rem;   */
 }
 .swiper {
   width: 30vw;
   height: 70vh;
-  /* position: absolute; */
-  /* left: 10%;
-    top: 15%; */
   margin: 0;
   padding: 0;
 }
 #about {
-  /* position: relative; */
   width: 40%;
 }
 #about h4 {
@@ -311,4 +309,137 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 650px) {
+  #navbar {
+    height: 100px;
+    width: 100vw;
+    padding: 0 5vw;
+    /* top: 10vw; */
+  }
+  #navbar i {
+    display: block;
+    font-size: 8vw;
+  }
+  #navbar img {
+    width: 40vw;
+  }
+  #navbar #nav-menu {
+    display: none;
+  }
+  #page1 #bg-div {
+    height: 90%;
+  }
+  #page1 #main-img {
+    top: 100px;
+    width: 80vw;
+    height: 35vh;
+  }
+  #page1 #page1-text {
+    top: 45vh;
+    width: 100%;
+    left: 10vw;
+  }
+  #page1 #page1-text h2 {
+    width: 90%;
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+  #page1 #page1-text p {
+    width: 70%;
+    font-size: 3vw;
+    line-height: 4vw;
+    margin-top: 4vw;
+    margin-bottom: 6vw;
+  }
+  #page1 #page1-text button {
+    font-size: 4vw;
+  }
+  #page2 {
+    padding: 0 10vw;
+    height: fit-content;
+    /* background-color: blue; */
+  }
+  #page2 h3 {
+    width: 100%;
+    font-size: 8vw;
+    line-height: 8vw;
+    margin: 4vw 0;
+  }
+  #page2 #topics {
+    position: relative;
+    /* height: 200vh; */
+    width: 100%;
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+
+    /* grid-template-columns: 1fr 1fr; */
+    margin: 0;
+  }
+
+  .topic-cards {
+    height: fit-content;
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .topic-cards h4 {
+    font-size: 7vw;
+    margin-bottom: 0;
+  }
+  .topic-cards p {
+    font-size: 4vw;
+    /* margin-top: 0; */
+  }
+  .topic-cards a {
+  }
+  .topic-cards img {
+    /* position: absolute; */
+    width: 40vw;
+    bottom: 100px;
+    right: unset;
+    display: none;
+    /* bottom: -5rem; */
+    /* right: -7rem; */
+  }
+  #page3 {
+    padding: 0 10vw;
+    margin-top: 15vw;
+    height: fit-content;
+  }
+  #page3 h3 {
+    width: 100%;
+    font-size: 8vw;
+    line-height: 8vw;
+    margin: 5vw 0;
+  }
+
+  .swiper {
+    position: relative;
+    width: 100%;
+    height: 80%;
+  }
+  #page3-content {
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+  }
+  #about {
+    width: 100%;
+    height: fit-content;
+  }
+  #about h4 {
+    font-size: 8vw;
+    margin-bottom: 2vw;
+  }
+  #about p {
+    font-size: 5vw;
+    line-height: 6vw;
+    display: -webkit-box;
+    -webkit-line-clamp: 13;
+    -webkit-box-orient: vertical;
+  }
 }
