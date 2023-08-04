@@ -1,14 +1,18 @@
-// gsap.from('#page1-text h2, #page1-text p, #page1-text button', {
-//   scale: 1.5,
-//   y: 200,
-//   opacity: 0,
-//   duration: 3,
-//   // stagger: 1,
-// })
+const cursor = document.querySelector('#cursorCircle')
+var halfWidth = cursor.getBoundingClientRect().width / 2
+var halfHeight = cursor.getBoundingClientRect().height / 2
+
+document.addEventListener('mousemove', (dets) => {
+  cursor.style.transform = `translate(${dets.clientX - halfWidth}px, ${
+    dets.clientY - halfHeight
+  }px)`
+})
+// }
+// mouseFollower()
 
 gsap.to('#navbar', {
   backgroundColor: '#092628',
-  duration: 0.5,
+  // duration: 0.5,
   height: '90px',
   scrollTrigger: {
     trigger: '#navbar',
@@ -16,7 +20,7 @@ gsap.to('#navbar', {
     // markers: true,
     start: 'top 0%',
     end: 'top -10%',
-    scrub: 1,
+    scrub: 2,
   },
 })
 

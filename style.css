@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Khula', sans-serif;
-  /* color: #092628; */
 }
 
 *::selection {
@@ -15,15 +14,26 @@
 
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
-  /* overflow-x: hidden; */
+}
+
+#cursorCircle {
+  position: fixed;
+  height: 20px;
+  width: 20px;
+  background-color: #00a2ac;
+  border-radius: 50%;
+  z-index: 9999;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  filter: invert(10);
 }
 #main {
-  width: 100%;
-  height: 100vh;
   position: relative;
-  /* background-color: blue; */
+  width: 100%;
+  /* min-height: 100vh; */
 }
 
 #navbar {
@@ -34,7 +44,6 @@ body {
   width: 100%;
   padding: 0 5vw;
   background-color: transparent;
-  /* gap: 50%; */
   position: fixed;
   z-index: 999;
 }
@@ -76,8 +85,8 @@ body {
 }
 #page1 #main-img {
   position: absolute;
-  height: 700px;
-  width: 600px;
+  height: 800px;
+  width: 800px;
   object-fit: cover;
   display: flex;
   right: 0;
@@ -94,7 +103,7 @@ body {
 
 #page1 #page1-text h2 {
   color: #fff;
-  width: 80%;
+  width: 70%;
   font-size: 4vw;
   line-height: 4.5vw;
   font-family: 'Fira Sans', sans-serif;
@@ -103,8 +112,8 @@ body {
 }
 #page1 #page1-text p {
   color: #fff;
-  width: 60%;
-  font-size: 0.9vw;
+  width: 50%;
+  font-size: 1.1rem;
   line-height: 1.2vw;
   font-weight: 400;
   margin-bottom: 40px;
@@ -131,6 +140,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
+  margin-bottom: 5vw;
 }
 #page2 h3 {
   font-family: 'Fira Sans', sans-serif;
@@ -215,7 +225,6 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  /* background-color: red; */
   overflow: hidden;
   padding: 0 5vw;
 }
@@ -348,7 +357,7 @@ body {
   }
   #page1 #page1-text p {
     width: 80%;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 4vw;
     line-height: 5vw;
     margin-top: 5vw;
@@ -370,13 +379,9 @@ body {
   }
   #page2 #topics {
     position: relative;
-    /* height: 200vh; */
     width: 100%;
-    /* height: 50vh; */
     display: flex;
     flex-direction: column;
-
-    /* grid-template-columns: 1fr 1fr; */
     margin: 0;
   }
 
@@ -405,8 +410,10 @@ body {
     /* right: -7rem; */
   }
   #page3 {
+    width: 100%;
     padding: 0 10vw;
     margin-top: 15vw;
+    /* margin-bottom: 15vw; */
     height: fit-content;
   }
   #page3 h3 {
@@ -443,4 +450,29 @@ body {
     -webkit-line-clamp: 13;
     -webkit-box-orient: vertical;
   }
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background-color: #092628;
+  /* background-color: red; */
+  bottom: 0;
+  overflow: hidden;
+}
+
+#footer img {
+  height: 130%;
+  /* background-color: red; */
+}
+
+#footer h5 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
 }
